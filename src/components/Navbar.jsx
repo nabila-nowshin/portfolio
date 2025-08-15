@@ -27,12 +27,17 @@ export default function Navbar() {
       <div
         className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 
         ${isScrolled ? "py-2 shadow-2xl" : "py-4 shadow-lg"} 
-        px-6 w-[90%] rounded-full border backdrop-blur-lg
+        px-6 w-full max-w-7xl rounded-full border backdrop-blur-lg
         ${theme === "light" ? "border-blue-300" : "border-gray-600"}`}
       >
         <div className="flex items-center justify-between font-poppins">
           {/* Logo */}
-          <div className="text-xl font-bold">Nabila</div>
+          <div
+            className="text-xl font-bold bg-clip-text text-transparent 
+                bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
+          >
+            Nabila <span>Nowshin</span>
+          </div>
 
           {/* Center Nav Links (hidden on mobile) */}
           <ul className="hidden lg:flex gap-6 text-md font-medium">
