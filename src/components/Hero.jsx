@@ -7,14 +7,17 @@ import Typewriter from "typewriter-effect";
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 md:pt-32 pb-16  md:px-12 flex flex-col md:flex-row items-center justify-center font-poppins overflow-hidden max-w-7xl mx-auto">
+    <section
+      className="relative pt-28 md:pt-32 pb-16  md:px-12 flex flex-col md:flex-row items-center justify-center font-poppins overflow-hidden max-w-7xl mx-auto"
+      id="home"
+    >
       {/* Background Blobs */}
       <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 opacity-20 rounded-full animate-blob animation-delay-2000 z-0"></div>
       <div className="fixed bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-r from-purple-300 via-pink-300 to-yellow-200 opacity-20 rounded-full animate-blob animation-delay-4000 z-0"></div>
 
       {/* Left: Intro */}
       <div className="md:w-1/2  mb-12 md:mb-0 relative z-10 animate-fade-in-left backdrop-blur-3xl py-5 px-10 bg-base-300/40 rounded-4xl hover:bg-base-200">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
           Hi, I’m Nabila
         </h1>
 

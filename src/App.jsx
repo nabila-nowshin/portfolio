@@ -4,6 +4,8 @@ import ThemeProvider from "./Provider/ThemeContext";
 import Hero from "./components/Hero";
 import About from "./components/AboutMe";
 import Aos from "aos";
+import Education from "./components/Education";
+import Skills from "./components/Skills";
 
 const App = () => {
   useEffect(() => {
@@ -18,12 +20,12 @@ const App = () => {
       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-      offset: 120, // offset (in px) from the original trigger point
+      offset: 120,
       delay: 0, // values from 0 to 3000, with step 50ms
       duration: 400, // values from 0 to 3000, with step 50ms
-      easing: "ease", // default easing for AOS animations
-      once: false, // whether animation should happen only once - while scrolling down
-      mirror: false, // whether elements should animate out while scrolling past them
+      easing: "ease",
+      once: false,
+      mirror: false,
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should
     });
   }, []);
@@ -32,6 +34,8 @@ const App = () => {
       <Navbar></Navbar>
       <Hero></Hero>
       <About></About>
+      <Education></Education>
+      <Skills></Skills>
     </ThemeProvider>
   );
 };
