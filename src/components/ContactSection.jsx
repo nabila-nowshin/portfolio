@@ -1,101 +1,6 @@
-// // ContactSection.tsx
-// import { useRef, useState } from "react";
-// import emailjs from "@emailjs/browser";
-// import { FiSend } from "react-icons/fi";
-// import toast, { Toaster } from "react-hot-toast";
-
-// export default function ContactSection() {
-//   const form = useRef(null);
-//   const [loading, setLoading] = useState(false);
-
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-//     if (!form.current) return;
-
-//     setLoading(true);
-
-//     emailjs
-//       .sendForm(
-//         "service_ztmt03t",
-//         "template_6edrhvo",
-//         form.current,
-//         "YWmskhN5CKRQdMhnW"
-//       )
-//       .then(
-//         () => {
-//           setLoading(false);
-//           toast.success("Message sent successfully! ✅");
-//           form.current?.reset();
-//         },
-//         (error) => {
-//           setLoading(false);
-//           toast.error(`Error: ${error.text}`);
-//         }
-//       );
-//   };
-
-//   return (
-//     <section id="contact" className="py-20 bg-base-100">
-//       <Toaster position="bottom-center" reverseOrder={false} />
-//       <div className="max-w-3xl mx-auto px-4">
-//         <div className="mb-12 text-center">
-//           <h2 className="text-4xl font-bold mb-2">Contact Me</h2>
-//           <p className="text-base-content/70">
-//             Have a question or want to work together? Send me a message!
-//           </p>
-//         </div>
-
-//         <form
-//           ref={form}
-//           onSubmit={sendEmail}
-//           className="flex flex-col gap-4 bg-base-300/40 backdrop-blur-3xl p-8 rounded-2xl"
-//         >
-//           <input
-//             type="text"
-//             name="user_name"
-//             placeholder="Your Name"
-//             className="input input-bordered w-full"
-//             required
-//           />
-//           <input
-//             type="email"
-//             name="user_email"
-//             placeholder="Your Email"
-//             className="input input-bordered w-full"
-//             required
-//           />
-//           <input
-//             type="text"
-//             name="subject"
-//             placeholder="Subject"
-//             className="input input-bordered w-full"
-//           />
-//           <textarea
-//             name="message"
-//             placeholder="Your Message"
-//             className="textarea textarea-bordered w-full resize-none"
-//             rows={6}
-//             required
-//           ></textarea>
-
-//           <button
-//             type="submit"
-//             className={`btn btn-primary flex items-center justify-center gap-2 ${
-//               loading ? "loading" : ""
-//             }`}
-//             disabled={loading}
-//           >
-//             {loading ? "Sending..." : "Send Message"} <FiSend />
-//           </button>
-//         </form>
-//       </div>
-//     </section>
-//   );
-// }
-
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FiSend } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiPhone, FiSend } from "react-icons/fi";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function ContactSection() {
@@ -151,10 +56,41 @@ export default function ContactSection() {
             <p className="text-base-content/90 mt-2 md:text-lg">
               Let’s build something amazing together! 🚀
             </p>
+            <div className="flex gap-4 mt-4">
+              <a
+                href="mailto:nabilanowshin327@gmail.com"
+                className="text-xl text-red-700 hover:text-red-600
+                transition-colors"
+              >
+                <FiMail />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/nabila-nowshin-697467292/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-xl text-blue-600 hover:text-blue-400 transition-colors"
+              >
+                <FiLinkedin />
+              </a>
+
+              <a
+                href="https://wa.me/8801708726286"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl text-green-500 hover:text-green-400 transition-colors"
+              >
+                <FiPhone />
+              </a>
+            </div>
           </div>
 
           {/* Right side: Form */}
           <div className="flex-1 w-full">
+            <p className="text-base-content/80 mb-4 md:text-xl text-center font-mono ">
+              You can email me directly at{" "}
+              <span className="font-bold">nabilanowshin327@gmail.com</span> 💌
+            </p>
             <form
               ref={form}
               onSubmit={sendEmail}
