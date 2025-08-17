@@ -9,6 +9,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import ContactSection from "./components/ContactSection";
 import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -41,7 +42,9 @@ const App = () => {
       <Education></Education>
       <Skills></Skills>
       <Projects></Projects>
+
       <ContactSection></ContactSection>
+      <Footer></Footer>
     </ThemeProvider>
   );
 };

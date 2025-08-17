@@ -156,7 +156,9 @@ export default function Projects() {
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-12">
           <span className="w-2 h-12 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 rounded-full"></span>
-          <h2 className="text-4xl font-bold">Projects</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+            Projects
+          </h2>
         </div>
 
         {/* Filter Buttons */}
@@ -292,7 +294,7 @@ export default function Projects() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center gap-4 mt-6 relative z-20">
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               className="px-4 py-2 rounded-lg transition btn btn-soft "
