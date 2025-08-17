@@ -9,17 +9,17 @@ export default function Footer() {
 
       <div className="relative z-10 flex flex-col items-center gap-4 text-center">
         {/* Logo / Name */}
-        <h2 className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
           Nabila Nowshin
         </h2>
 
         {/* Tagline */}
-        <p className="text-base-content/70 italic">
+        <p className="text-base-content/70 italic text-sm md:text-lg">
           Building modern web experiences with passion ✨
         </p>
 
         {/* Social Icons */}
-        <div className="flex gap-6 text-2xl text-base-content/70 mt-2">
+        <div className="flex gap-6 text-lg md:text-xl lg:text-2xl text-base-content/70 mt-2">
           <a
             href="mailto:nabilanowshin327@gmail.com"
             target="_blank"

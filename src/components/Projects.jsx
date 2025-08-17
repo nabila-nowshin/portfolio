@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import { FiExternalLink, FiGithub, FiX } from "react-icons/fi";
 
@@ -124,7 +124,24 @@ export default function Projects() {
   const [filter, setFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const projectsPerPage = 2;
+  // inside your Projects component
+  const [projectsPerPage, setProjectsPerPage] = useState(2);
+
+  // Listen to screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setProjectsPerPage(1);
+      } else {
+        setProjectsPerPage(2);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const techFilters = [
     "All",
@@ -294,26 +311,31 @@ export default function Projects() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center gap-4 mt-6 relative z-20">
+          <div className="flex justify-center gap-4 mt-6 relative z-20 flex-wrap">
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-              className="px-4 py-2 rounded-lg transition btn btn-soft "
+              className="px-4 py-2 rounded-lg transition btn btn-soft"
             >
               Previous
             </button>
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentPage(i + 1)}
-                className={`px-4 py-2 rounded-lg transition ${
-                  currentPage === i + 1
-                    ? "bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-white"
-                    : "btn btn-soft"
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
+
+            {/* Numbered buttons: hidden on small screens */}
+            <div className="hidden sm:flex gap-2">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`px-4 py-2 rounded-lg transition ${
+                    currentPage === i + 1
+                      ? "bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-white"
+                      : "btn btn-soft"
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+            </div>
+
             <button
               onClick={() =>
                 setCurrentPage((prev) => Math.min(prev + 1, totalPages))
