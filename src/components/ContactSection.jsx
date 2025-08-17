@@ -129,7 +129,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-base-100">
+    <section id="contact" className=" bg-base-100 pt-20 md:pt-30">
       <Toaster position="bottom-center" reverseOrder={false} />
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-center">

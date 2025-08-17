@@ -2,7 +2,7 @@ import { FiMail, FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-base-200 py-12 overflow-hidden">
+    <footer className="relative bg-base-200 py-12 overflow-hidden  mt-30">
       {/* Background decorative blobs */}
       <div className="absolute -top-16 -left-16 w-72 h-72 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-full opacity-20 filter blur-3xl animate-blob mix-blend-multiply"></div>
       <div className="absolute -bottom-20 -right-16 w-96 h-96 bg-gradient-to-r from-pink-400 via-purple-500 to-blue-400 rounded-full opacity-20 filter blur-3xl animate-blob animation-delay-2000 mix-blend-multiply"></div>

@@ -8,7 +8,7 @@ import Typewriter from "typewriter-effect";
 export default function Hero() {
   return (
     <section
-      className="relative pt-28 md:pt-32 pb-16  md:px-12 flex flex-col md:flex-row items-center justify-center font-poppins overflow-hidden max-w-7xl mx-auto w-11/12"
+      className="relative pt-28 md:pt-32  md:px-12 flex flex-col md:flex-row items-center justify-center font-poppins overflow-hidden max-w-7xl mx-auto w-11/12"
       id="home"
     >
       {/* Background Blobs */}
@@ -25,7 +25,7 @@ export default function Hero() {
           className="text-lg sm:text-xl md:text-3xl mb-6 font-medium font-mono"
           style={{ color: "var(--color-primary)" }}
         >
-          Full Stack Developer |
+          Aspiring Full Stack Developer |
           <span className="text-sm sm:text-lg md:text-2xl">
             <Typewriter
               options={{
@@ -77,8 +77,8 @@ export default function Hero() {
         {/* Social Icons */}
         <div className="flex gap-4 mt-4">
           <a
-            href="mailto:your.email@example.com"
-            className="text-xl text-gray-700 hover:text-blue-500 transition-colors"
+            href="mailto:nabilanowshin327@gmail.com"
+            className="text-xl text-base-content/80 hover:text-blue-500 transition-colors"
           >
             <FiMail />
           </a>
@@ -86,7 +86,7 @@ export default function Hero() {
             href="https://github.com/nabila-nowshin"
             target="_blank"
             rel="noreferrer"
-            className="text-xl text-gray-700 hover:text-blue-500 transition-colors"
+            className="text-xl text-base-content/80 hover:text-blue-500 transition-colors"
           >
             <FiGithub />
           </a>
@@ -94,7 +94,7 @@ export default function Hero() {
             href="https://www.linkedin.com/in/nabila-nowshin-697467292/"
             target="_blank"
             rel="noreferrer"
-            className="text-xl text-gray-700 hover:text-blue-500 transition-colors"
+            className="text-xl text-base-content/80 hover:text-blue-500 transition-colors"
           >
             <FiLinkedin />
           </a>

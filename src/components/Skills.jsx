@@ -75,8 +75,8 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-base-100">
-      <div className="max-w-7xl w-11/12  mx-auto px-4 mb-20">
+    <section id="skills" className="bg-base-100 pt-20 md:pt-30">
+      <div className="max-w-7xl w-11/12  mx-auto px-4 ">
         {/* Section Header */}
         <div className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-6 flex items-center gap-3 ">
           <span className="w-2 h-12 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 rounded-full"></span>
