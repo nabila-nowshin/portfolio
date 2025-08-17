@@ -8,7 +8,7 @@ import Typewriter from "typewriter-effect";
 export default function Hero() {
   return (
     <section
-      className="relative pt-28 md:pt-32 pb-16  md:px-12 flex flex-col md:flex-row items-center justify-center font-poppins overflow-hidden max-w-7xl mx-auto"
+      className="relative pt-28 md:pt-32 pb-16  md:px-12 flex flex-col md:flex-row items-center justify-center font-poppins overflow-hidden max-w-7xl mx-auto w-11/12"
       id="home"
     >
       {/* Background Blobs */}

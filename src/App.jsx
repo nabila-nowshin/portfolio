@@ -6,6 +6,9 @@ import About from "./components/AboutMe";
 import Aos from "aos";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import ContactSection from "./components/ContactSection";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   useEffect(() => {
@@ -31,11 +34,14 @@ const App = () => {
   }, []);
   return (
     <ThemeProvider>
+      {/* <Toaster position="top-right" reverseOrder={false} /> */}
       <Navbar></Navbar>
       <Hero></Hero>
       <About></About>
       <Education></Education>
       <Skills></Skills>
+      <Projects></Projects>
+      <ContactSection></ContactSection>
     </ThemeProvider>
   );
 };

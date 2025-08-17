@@ -3,7 +3,7 @@ import lottieFile from "../assets/Programming Computer.json";
 export default function About() {
   return (
     <section id="about" className="py-20 bg-base-100">
-      <div className="max-w-7xl mx-auto px-4 items-center gap-12 grid lg:grid-cols-2">
+      <div className="max-w-7xl mx-auto px-4  w-11/12 items-center gap-12 grid lg:grid-cols-2 ">
         {/* Image */}
         <div data-aos="fade-up">
           <Lottie animationData={lottieFile} loop={true} />

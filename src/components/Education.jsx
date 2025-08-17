@@ -17,8 +17,8 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 bg-base-100 font-mono">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="education" className="bg-base-100 font-mono">
+      <div className="max-w-7xl mx-auto px-4 w-11/12 mb-20">
         {/* Section Header */}
         <div className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-10 flex items-center gap-3">
           <span className="w-2 h-10 bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 rounded-full"></span>

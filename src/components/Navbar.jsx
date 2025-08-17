@@ -25,9 +25,9 @@ export default function Navbar() {
     <>
       {/* Navbar */}
       <div
-        className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 
+        className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300  
         ${isScrolled ? "py-2 shadow-2xl" : "py-4 shadow-lg"} 
-        px-6 w-full max-w-7xl rounded-full border backdrop-blur-lg
+        px-6 max-w-7xl w-11/12 rounded-full border backdrop-blur-lg
         ${theme === "light" ? "border-blue-300" : "border-gray-600"}`}
       >
         <div className="flex items-center justify-between font-poppins">

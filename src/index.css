@@ -7,9 +7,9 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: #3b82f6;    /* soft, slightly darker blue */
+  --color-primary: #3b82f6;    
   --color-secondary: #60a5fa;  /* lighter blue for highlights */
-  --color-accent: #fcd34d;     /* soft amber for buttons or small highlights */
+  --color-accent: var(--color-violet-600);     /* soft amber for buttons or small highlights */
   --color-neutral: #f9fafb;    /* very light gray background */
   --color-base: #ffffff;        /* main background */
   --color-info: #60a5fa;       /* info highlights */
@@ -23,7 +23,7 @@
   name: "myDark";
  --color-primary: #2563eb;   
   --color-secondary: #1e40af; 
-  --color-accent: #fcd34d;    
+  --color-accent: var(--color-violet-300);    
   --color-neutral: #111827;   
   --color-base: #1f2937;      
   --color-info: #3b82f6;      
